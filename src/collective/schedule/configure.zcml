@@ -6,6 +6,7 @@
 
   <five:registerPackage package="." initialize=".initialize" />
 
-  <!-- -*- extra stuff goes here -*- -->
-  
+  <include file="meta.zcml" />
+  <include package=".browser" />
+
 </configure>

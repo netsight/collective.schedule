@@ -8,8 +8,8 @@
   <browser:page
      name="schedule"
      for="Products.CMFPlone.interfaces.IPloneSiteRoot"
-     class=".views.ScheduleView"
-     attribute="schedule"
+     class=".views.ScheduleTick"
+     attribute="tick"
      permission="zope2.View"
      />
 

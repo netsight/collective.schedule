@@ -1,0 +1,17 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:meta="http://namespaces.zope.org/meta">
+
+  <include package="Zope2.App" file="meta.zcml" />
+
+  <meta:directives namespace="http://namespaces.zope.org/five">
+
+    <meta:directive
+       name="job"
+       schema=".interfaces.IScheduleDirective"
+       handler=".meta.scheduledirective"
+       />
+
+  </meta:directives>
+
+</configure>
