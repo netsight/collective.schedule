@@ -13,7 +13,7 @@ def scheduledirective(_context, view, unit, interval=None, at=None):
 
     logger.info("Job: '%(view)s' scheduled every %(interval)s%(unit)s %(at)s" % {
         'view': view,
-        'interval': interval and (" %s" % interval) or "",
+        'interval': interval and ("%s " % interval) or "",
         'unit': unit,
         'at': at and ("at %s" % at) or "",
     })
