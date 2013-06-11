@@ -8,7 +8,7 @@ from collective.schedule.testing import\
     COLLECTIVE_SCHEDULE_INTEGRATION_TESTING
 
 
-class TestExample(unittest.TestCase):
+class TestZCML(unittest.TestCase):
 
     layer = COLLECTIVE_SCHEDULE_INTEGRATION_TESTING
     zcml_template = """
