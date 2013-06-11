@@ -6,7 +6,7 @@
     i18n_domain="collective.schedule">
 
   <browser:page
-     name="schedule"
+     name="schedule-tick"
      for="Products.CMFPlone.interfaces.IPloneSiteRoot"
      class=".views.ScheduleTick"
      attribute="tick"
