@@ -1,0 +1,18 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:five="http://namespaces.zope.org/five"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:i18n="http://namespaces.zope.org/i18n"
+    i18n_domain="collective.schedule">
+
+  <include package="Products.Five" file="meta.zcml" />
+
+  <browser:page
+     name="dummy-view"
+     for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+     class=".test_zcml.DummyView"
+     attribute="dummy"
+     permission="zope2.View"
+     />
+
+</configure>

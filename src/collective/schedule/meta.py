@@ -1,5 +1,7 @@
 from zope.component import getUtility
+from zope.component import getMultiAdapter
 from Products.CMFCore.interfaces import ISiteRoot
+from zope.globalrequest import getRequest
 
 import schedule
 import logging
@@ -25,8 +27,14 @@ def scheduledirective(_context, view, unit, interval=None, at=None):
     if at is not None:
         jobtime = jobtime.at(at)
 
+    if isinstance(view, unicode):
+        view = view.encode('utf8')
+
     def load_view(viewname):
-        site = getUtility(ISiteRoot)
-        site.restrictedTraverse(viewname)()
+        context = getUtility(ISiteRoot)
+        request = getRequest()
+        view = getMultiAdapter((context, request),
+                               name=viewname)
+        view()
 
     jobtime.do(load_view, view)
