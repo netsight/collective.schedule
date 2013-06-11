@@ -1,3 +1,6 @@
+from zope.component import getUtility
+from Products.CMFCore.interfaces import ISiteRoot
+
 import schedule
 import logging
 
@@ -22,7 +25,8 @@ def scheduledirective(_context, view, unit, interval=None, at=None):
     if at is not None:
         jobtime = jobtime.at(at)
 
-    def foo():
-        print view
+    def load_view(viewname):
+        site = getUtility(ISiteRoot)
+        site.restrictedTraverse(viewname)()
 
-    jobtime.do(foo)
+    jobtime.do(load_view, view)
