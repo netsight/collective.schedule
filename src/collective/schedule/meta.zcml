@@ -4,7 +4,7 @@
 
   <include package="Zope2.App" file="meta.zcml" />
 
-  <meta:directives namespace="http://namespaces.zope.org/five">
+  <meta:directives namespace="http://namespaces.zope.org/schedule">
 
     <meta:directive
        name="job"
