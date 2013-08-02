@@ -18,7 +18,7 @@ Add the global 'tick' method as a clock server in your buildout config:
     ...
     zope-conf-additional =
         <clock-server>
-          method /connect/@@schedule-tick
+          method /plonesite/@@schedule-tick
           period 300
           user adminusername
           password adminpassword
