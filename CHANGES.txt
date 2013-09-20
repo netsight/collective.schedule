@@ -1,6 +1,10 @@
 Changelog
 =========
 
+0.1.1 (2013-09-20)
+-------------------
+- Correctly wrap the context in with a request (Fixes AttributeError 'REQUEST' in page templates)
+
 0.1 (2013-06-14)
 -------------------
 
