@@ -1,6 +1,10 @@
 Changelog
 =========
 
+0.1.2 (2013-09-20)
+-------------------
+- Look up the context (plone site) correctly
+
 0.1.1 (2013-09-20)
 -------------------
 - Correctly wrap the context in with a request (Fixes AttributeError 'REQUEST' in page templates)
