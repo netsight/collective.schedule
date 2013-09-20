@@ -1,8 +1,9 @@
-from zope.component import getUtility
 from zope.component import getMultiAdapter
-from Products.CMFCore.interfaces import ISiteRoot
+try:
+    from zope.component.hooks import getSite
+except:
+    from zope.app.component.hooks import getSite
 from zope.globalrequest import getRequest
-from Testing.makerequest import makerequest
 
 import schedule
 import logging
@@ -33,8 +34,7 @@ def scheduledirective(_context, view, unit, interval=None, at=None):
 
     # wrapper function to trigger the view
     def load_view(viewname):
-        context = getUtility(ISiteRoot)
-        context = makerequest(context)
+        context = getSite()
         request = getRequest()
         view = getMultiAdapter((context, request),
                                name=viewname)
