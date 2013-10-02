@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 import os
 
-version = '0.1.3'
+version = '0.1.4'
 
 long_description = (
     open('README.md').read()
@@ -19,13 +19,13 @@ setup(name='collective.schedule',
       description="Plone integration for the python 'schedule' library",
       long_description=long_description,
       classifiers=[
-        "Programming Language :: Python",
+          "Programming Language :: Python",
       ],
-      keywords='',
-      author='',
+      keywords='python plone schedule cron',
+      author='Matt Sital-Singh',
       author_email='',
       url='https://github.com/netsight/collective.schedule',
-      license='gpl',
+      license='BSD',
       packages=find_packages('src'),
       package_dir={'': 'src'},
       namespace_packages=['collective'],

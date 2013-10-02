@@ -1,6 +1,10 @@
 Changelog
 =========
 
+0.1.4 (2013-10-02)
+-------------------
+- Package distribution fixes
+
 0.1.3 (2013-09-20)
 -------------------
 - Documentation updates
