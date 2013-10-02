@@ -8,14 +8,15 @@ It provides the following:
  * A ZML interface for scheduling jobs
  * A single 'tick' job processing view that can be registered using a Zope Clock Server
 
-Installation
-------------
+Configuration
+-------------
 
-First add the global 'tick' method as a clock server in your buildout config:
+First add `collective.schedule` to your buildout eggs.
+Then register the collective.schedule 'tick' method as a clock server in your buildout config:
 
     [buildout]
     ...
-    
+
     [instance]
     recipe = plone.recipe.zope2instance
     ...
@@ -27,6 +28,9 @@ First add the global 'tick' method as a clock server in your buildout config:
           password password
         </clock-server>
 
+Scheduling jobs
+---------------
+
 You can then register jobs using ZCML as follows:
 
     <configure
@@ -34,8 +38,8 @@ You can then register jobs using ZCML as follows:
         <schedule:job
           view="myview"
           unit="day"
-          at="22:00" 
+          at="22:00"
           />
     </configure>
-    
+
 Where 'myview' is a browser view that can be looked up on the Plone Site and executed with the user defined in the clock server above.
