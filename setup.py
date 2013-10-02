@@ -16,7 +16,7 @@ long_description = (
 
 setup(name='collective.schedule',
       version=version,
-      description="",
+      description="Plone integration for the python 'schedule' library",
       long_description=long_description,
       classifiers=[
         "Programming Language :: Python",
