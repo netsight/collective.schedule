@@ -43,3 +43,5 @@ You can then register jobs using ZCML as follows:
     </configure>
 
 Where 'myview' is a browser view that can be looked up on the Plone Site and executed with the user defined in the clock server above.
+
+For more details on the options for scheduling jobs, see https://github.com/dbader/schedule
