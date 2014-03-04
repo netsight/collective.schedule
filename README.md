@@ -22,7 +22,10 @@ Then register the collective.schedule 'tick' method as a clock server in your bu
     ...
     zope-conf-additional =
         <clock-server>
-          method /plonesite/@@schedule-tick
+          method /plonesitename/@@schedule-tick
+          # If you have virtual host rewriting, you will need to
+          # use the following format instead:
+          # method /VirtualHostBase/http/www.mysite.com/plonesitename/VirtualHostRoot/@@schedule-tick
           period 300
           user username
           password password
