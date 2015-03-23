@@ -1,23 +1,34 @@
 Changelog
 =========
 
+0.2 (unreleased)
+-------------------
+- Better error handling and logging. 
+  Exceptions in jobs no longer affect other jobs.
+  [mattss]
+
 0.1.4 (2013-10-02)
 -------------------
 - Package distribution fixes
+  [mattss]
 
 0.1.3 (2013-09-20)
 -------------------
 - Documentation updates
+  [mattss]
 
 0.1.2 (2013-09-20)
 -------------------
 - Look up the context (plone site) correctly
+  [mattss]
 
 0.1.1 (2013-09-20)
 -------------------
 - Correctly wrap the context in with a request (Fixes AttributeError 'REQUEST' in page templates)
+  [mattss]
 
 0.1 (2013-06-14)
 -------------------
 
 - Initial release
+  [mattss]

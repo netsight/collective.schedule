@@ -36,9 +36,12 @@ def scheduledirective(_context, view, unit, interval=None, at=None):
     def load_view(viewname):
         context = getSite()
         request = getRequest()
-        view = getMultiAdapter((context, request),
-                               name=viewname)
-        view()
+        try:
+            view = getMultiAdapter((context, request),
+                                   name=viewname)
+            view()
+        except Exception:
+            logger.exception('Exception whilst executing job: %s', viewname)
 
     # schedule the wrapper function
     jobtime.do(load_view, view)
