@@ -1,8 +1,8 @@
 Changelog
 =========
 
-0.2 (unreleased)
--------------------
+0.2 (2015-03-23)
+----------------
 - Better error handling and logging. 
   Exceptions in jobs no longer affect other jobs.
   [mattss]
